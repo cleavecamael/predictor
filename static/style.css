@@ -1,0 +1,99 @@
+form {
+  font-family: 'Anaheim';
+  background-color: #FFD6DD;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+  line-height: 40px;
+
+
+}
+
+.title{
+  font-family: 'Anaheim';
+  text-align:center;
+  font-size:40px
+}
+.credits{
+  font-family: 'Anaheim';
+  text-align:center;
+}
+.collection{
+   font-family: 'Anaheim';
+  background-color: #FFD6DD;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+  line-height: 40px;
+}
+
+.background{
+  background-color: #FF5C6C;
+  padding: 50px 200px 50px 200px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+h1{
+  text-align:center;
+}
+
+
+.calculator{
+  display:table;
+  flex:30%;
+}
+.flex-container{
+  display:flex;
+  flex-direction: row
+}
+
+.vertical {
+  border-left: 2px solid grey;
+  height: 200px;
+  opacity:0.5;
+}
+.results{
+  background-color: #E5E5E5;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+  line-height: 40px;
+  margin: 10px;
+  font-size: 30px
+}
+.field{
+  display:table-row;
+}
+
+input{
+
+  width:90px;
+  height:20px
+}
+.input{
+  width:120px
+}
+.input1{
+  width:350px
+}
+.label{
+  width:100px;
+}
+
+
+td{
+   width = 200px;
+}
+
+
+button{
+  border-radius: 5px;
+  padding: 5px 22px;8
+  background-color: #90EE90;
+  font-family: 'Anaheim';
+  font-size: 15px;
+  color:black;
+  cursor:pointer;
+}
+
+caption{
+  font-size:20px;
+}

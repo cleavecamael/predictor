@@ -1,0 +1,143 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<head>
+<link rel="stylesheet" href={{css_link}} type="text/css">
+<script src={{js_link}}></script>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Anaheim&display=swap');
+</style>
+</head>
+<html>
+  <div class="background">
+    <div class="title">COVID-19 Death Estimator</div>
+    <br>
+    <div class="credits">by Cohort 07 Group 09</div>
+    <br>
+    <div class = "collection">This model predicts the proportion of deaths to population per month (PDPM), using the Proportion of Elderly to Population (Elderly %) and GDP per Capita (GDP)<br> This calculator can be used to predict the expected PDPM using the Elderly % and GDP, or to check the model's accuracy by comparing the predicted PDPM with the actual PDPM of countries.</div>
+    <br>
+    <div class = "collection">
+     <div class = "flex-container">
+       <div class = "calculator">
+        <table>
+        <caption>Key in your own values</caption>
+          <tr><td class="label">Elderly %</td><td class="input1"><input id="elderly1"></td></tr>
+          <tr><td class="label">GDP</td><td class="input1"><input id="GDP1"></td></tr>
+
+         </table>
+         <button onclick = "updateResults()"><b>Calculate!</b></button>
+       </div>
+       <div class="divider">
+         or
+         <div class="vertical"></div>
+       </div>
+       <div class = "calculator"><table>
+        <caption>Compare predicted values for countries</caption>
+         <tr><td class="label">Country</td><td class="input">
+           <select id="country" name="country" onchange = "updateParameters()">
+             <option>select country</option>
+             <option value='Albania'>Albania</option>
+<option value='Algeria'>Algeria</option>
+<option value='Argentina'>Argentina</option>
+<option value='Armenia'>Armenia</option>
+<option value='Australia'>Australia</option>
+<option value='Austria'>Austria</option>
+<option value='Azerbaijan'>Azerbaijan</option>
+<option value='Bahamas'>Bahamas</option>
+<option value='Bahrain'>Bahrain</option>
+<option value='Belarus'>Belarus</option>
+<option value='Belgium'>Belgium</option>
+<option value='Bolivia'>Bolivia</option>
+<option value='Bosnia and Herzegovina'>Bosnia and Herzegovina</option>
+<option value='Botswana'>Botswana</option>
+<option value='Brazil'>Brazil</option>
+<option value='Brunei'>Brunei</option>
+<option value='Bulgaria'>Bulgaria</option>
+<option value='Canada'>Canada</option>
+<option value='Cape Verde'>Cape Verde</option>
+<option value='Chile'>Chile</option>
+<option value='China'>China</option>
+<option value='Colombia'>Colombia</option>
+<option value='Costa Rica'>Costa Rica</option>
+<option value='Croatia'>Croatia</option>
+<option value='Cyprus'>Cyprus</option>
+<option value='Czechia'>Czechia</option>
+<option value='Denmark'>Denmark</option>
+<option value='Dominican Republic'>Dominican Republic</option>
+<option value='Ecuador'>Ecuador</option>
+<option value='Egypt'>Egypt</option>
+<option value='El Salvador'>El Salvador</option>
+<option value='Estonia'>Estonia</option>
+<option value='Finland'>Finland</option>
+<option value='France'>France</option>
+<option value='Gabon'>Gabon</option>
+<option value='Germany'>Germany</option>
+<option value='Greece'>Greece</option>
+<option value='Guatemala'>Guatemala</option>
+<option value='Guyana'>Guyana</option>
+<option value='Honduras'>Honduras</option>
+<option value='Hong Kong'>Hong Kong</option>
+<option value='Hungary'>Hungary</option>
+<option value='Iceland'>Iceland</option>
+<option value='Indonesia'>Indonesia</option>
+<option value='Iran'>Iran</option>
+<option value='Iraq'>Iraq</option>
+<option value='Ireland'>Ireland</option>
+<option value='Israel'>Israel</option>
+<option value='Italy'>Italy</option>
+<option value='Jamaica'>Jamaica</option>
+<option value='Jordan'>Jordan</option>
+<option value='Kazakhstan'>Kazakhstan</option>
+<option value='Lebanon'>Lebanon</option>
+<option value='Libya'>Libya</option>
+<option value='Lithuania'>Lithuania</option>
+<option value='Luxembourg'>Luxembourg</option>
+<option value='Malaysia'>Malaysia</option>
+<option value='Mauritius'>Mauritius</option>
+<option value='Mexico'>Mexico</option>
+<option value='Moldova'>Moldova</option>
+<option value='Montenegro'>Montenegro</option>
+<option value='Netherlands'>Netherlands</option>
+<option value='New Zealand'>New Zealand</option>
+<option value='North Macedonia'>North Macedonia</option>
+<option value='Norway'>Norway</option>
+<option value='Oman'>Oman</option>
+<option value='Palestine'>Palestine</option>
+<option value='Panama'>Panama</option>
+<option value='Paraguay'>Paraguay</option>
+<option value='Poland'>Poland</option>
+<option value='Portugal'>Portugal</option>
+<option value='Qatar'>Qatar</option>
+<option value='Romania'>Romania</option>
+<option value='Russia'>Russia</option>
+<option value='Saudi Arabia'>Saudi Arabia</option>
+<option value='Serbia'>Serbia</option>
+<option value='Singapore'>Singapore</option>
+<option value='Slovakia'>Slovakia</option>
+<option value='Slovenia'>Slovenia</option>
+<option value='South Africa'>South Africa</option>
+<option value='South Korea'>South Korea</option>
+<option value='Spain'>Spain</option>
+<option value='Sri Lanka'>Sri Lanka</option>
+<option value='Sweden'>Sweden</option>
+<option value='Switzerland'>Switzerland</option>
+<option value='Thailand'>Thailand</option>
+<option value='Trinidad and Tobago'>Trinidad and Tobago</option>
+<option value='Tunisia'>Tunisia</option>
+<option value='Turkey'>Turkey</option>
+<option value='Ukraine'>Ukraine</option>
+<option value='United Arab Emirates'>United Arab Emirates</option>
+<option value='United Kingdom'>United Kingdom</option>
+<option value='United States'>United States</option>
+<option value='Uruguay'>Uruguay</option>
+<option value='Venezuela'>Venezuela</option>
+
+
+</select></td></tr>
+          <tr><td class="label">Elderly %</td><td class="input" ><input id = 'actPEP'></td><td class="label">Actual PDPM</td><td class="input"><input id = 'actPDPM'></td></tr>
+          <tr><td class="label">GDP</td><td class="input" ><input id = 'actGDP'></td></tr>
+
+         </table><button onclick = "updateResults1()"><b>Calculate!</b></button></div>
+
+    </div>
+       <div class="results">Estimated PDPM: <b><span id ="predValue"></span></b></div>
+  </div>
+</html>
